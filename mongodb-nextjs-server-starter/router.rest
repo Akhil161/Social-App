@@ -1,0 +1,60 @@
+GET http://localhost:8000/user
+
+###
+
+GET http://localhost:8000/user/akhilgarg1610@gmail.com
+
+###
+
+POST http://localhost:8000/user
+Content-Type: application/json
+
+{
+    "name":"Test User",
+    "email":"dummy@gmail.com",
+    "image":"Test Image"
+}
+
+####
+
+GET http://localhost:8000/post
+
+
+####
+
+POST http://localhost:8000/post
+Content-Type: application/json
+
+{
+    "postText":"Sample Post Msg",
+    "createdAt":"32635655",
+    "createdBy":"65e750890ea5877a47e80728",
+    "imageUrl":"sample url"
+
+}
+
+###
+
+
+PUT http://localhost:8000/post/like/65e8aefc86c9191cb82b3151
+Content-Type: application/json
+
+{
+    "userId":"65e750890ea5877a47e80728",
+    "isLike":true
+}
+
+###
+
+POST http://localhost:8000/comment
+Content-Type: application/json
+
+{
+    "postId":"65e8aefc86c9191cb82b3151",
+    "userId":"65e750890ea5877a47e80728",
+    "commentText":"Sample New Comment",
+    "createdAt":"1234"
+}
+
+###
+DELETE http://localhost:8000/comment/65f5c6551eb1985478a8e601
