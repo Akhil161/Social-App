@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import GlobalApi from './_utils/GlobalApi';
 import { UserButton, useUser } from '@clerk/nextjs';
+import { Toaster } from '@Component//ui/toaster';
 
 export default function Home() {
   const {user} = useUser()
@@ -25,8 +26,9 @@ export default function Home() {
   }
 
   return (
-  <div>
+  <>
     <UserButton/>
-  </div>
+    <Toaster/>
+    </>
   )
 }

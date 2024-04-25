@@ -20,8 +20,11 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
       <UserDetailContext.Provider value={{ userDetail, setUserDetail }}>
         <html lang="en">
-          <body className={inter.className} >{children}</body>
+          <body className={inter.className} >
+          {children}
           <Toaster/>
+        </body>
+       
         </html>
       </UserDetailContext.Provider>
     </ClerkProvider>
